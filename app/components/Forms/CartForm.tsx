@@ -3,6 +3,8 @@
 import Image from "next/image";
 
 import QuantityButton from "../Buttons/QuantityButton";
+import { useSession } from "next-auth/react";
+import { loadStripe } from "@stripe/stripe-js";
 import GarbageIcon from "@/app/assets/GarbageIcon";
 import { useCartContext } from "@/app/context/cart-reducer";
 import { Button } from "@/components/ui/button";
@@ -31,49 +33,32 @@ const CartForm = () => {
     cartCtx.removeItem(id);
   };
 
-  const numberOfItems =
-    cartCtx.items?.reduce((curNumber, item) => {
-      return curNumber + item.amount;
-    }, 0) || 0;
+  const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
+  );
 
-  const cartIDS = cartCtx.items?.map((item) => item.id) || [];
+  const { data: session } = useSession();
+  const handleCheckout = async () => {
+    const stripe = await stripePromise;
+    const response = await fetch("api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        items: cartCtx.items,
+        email: session?.user?.email,
+      }),
+    });
+    const data = await response.json();
 
-  const buyItems = async () => {
-    const data = {
-      quantity: numberOfItems,
-      product_id: cartIDS,
-    };
-
-    try {
-      const response = await fetch(
-        "http://localhost:3001/api/v2/pay/checkout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
-
-      const responseData = await response.json();
-
-      console.log(responseData);
-
-      const { err, msg } = responseData;
-
-      if (!err) {
-        console.log("successfully");
-      } else if (response.status === 400 && responseData.err) {
-        console.log("Invalid action");
-      }
-    } catch (error) {
-      console.error("Error during POST request:", error);
+    if (response.ok) {
+      stripe?.redirectToCheckout({ sessionId: data.id });
+    } else {
+      throw new Error("Failed to create Stripe Payment");
     }
   };
 
   if (cartCtx.items?.length === 0) {
-    return <h2 className="text-xl text-center">Košarica je prazna</h2>;
+    return <h2 className="text-xl text-center">Cart is empty</h2>;
   }
 
   return (
@@ -156,7 +141,7 @@ const CartForm = () => {
         <Button
           variant="default"
           className="py-5 px-4 sm:py-7 sm:px-24 hover:bg-foreground hover:text-primary font-bold  text-lg sm:tracking-widest"
-          onClick={buyItems}
+          onClick={handleCheckout}
         >
           PROCCED TO CHECKOUT
         </Button>
