@@ -21,12 +21,15 @@ export const POST = async (request: NextRequest) => {
       },
     }));
 
+    const successUrL = `${process.env.NEXTAUTH_URL}/success`;
+    const cancelUrl = `${process.env.NEXTAUTH_URL}/checkout`;
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: extractingItems,
       mode: "payment",
-      success_url: `${process.env.NEXTAUTH_URL}/success`,
-      cancel_url: `${process.env.NEXTAUTH_URL}/checkout`,
+      success_url: successUrL,
+      cancel_url: cancelUrl,
       metadata: {
         email,
       },
