@@ -68,7 +68,6 @@ const MobileNavbar = () => {
             key={index}
             href={item.href}
             className={getNavItemClass(item.href)}
-            scroll={false}
           >
             <li className="flex flex-col items-center">
               {item.icon}

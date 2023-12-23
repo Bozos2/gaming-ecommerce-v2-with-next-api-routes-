@@ -42,20 +42,20 @@ const HomeText = () => {
   };
 
   return (
-    <div className="my-12 lg:my-4 p-4 h-[850px] overflow-y-auto w-full  max-w-4xl mx-auto rounded-md">
-      <div className="mt-4">
+    <div className="my-12 lg:my-4 p-4 h-[750px] sm:overflow-y-auto w-full  max-w-4xl mx-4 sm:mx-auto rounded-md">
+      <div className="mt-8 sm:mt-4">
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: "0%", opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="mb-8 w-full tracking-wider text-left pl-2"
         >
-          <h1 className="text-foreground text-6xl sm:text-7xl xl:text-8xl font-bold font-blackops">
+          <h1 className="text-foreground text-5xl sm:text-7xl  xl:text-8xl font-bold font-blackops mr-2">
             Design Your <span className="text-primary">Figure</span> to Your
             Preferences
           </h1>
         </motion.div>
-        <div className="text-foreground text-xl sm:text-2xl md:text-3xl leading-snug tracking-widest px-3 text-left">
+        <div className="text-foreground text-lg sm:text-2xl md:text-3xl leading-snug tracking-widest px-6 sm:px-3 text-left">
           {renderWords()}
         </div>
         <motion.div
