@@ -42,7 +42,7 @@ const HomeText = () => {
   };
 
   return (
-    <div className="my-12 lg:my-4 p-4 h-[750px] sm:overflow-y-auto w-full  max-w-4xl mx-4 sm:mx-auto rounded-md">
+    <div className="my-12 lg:my-4 p-4 h-[750px] sm:h-[850px] sm:overflow-y-auto w-full  max-w-4xl mx-4 sm:mx-auto rounded-md">
       <div className="mt-8 sm:mt-4">
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
