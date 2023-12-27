@@ -1,10 +1,12 @@
 import User from "@/lib/mongooseModel";
+import { connectToMongoDB } from "@/lib/mongooseConnect";
 
 interface VerifyEmailPageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const VerifyEmailPage = async ({ searchParams }: VerifyEmailPageProps) => {
+  connectToMongoDB().catch((err) => console.log("error:", err));
   if (searchParams.token) {
     const user = await User.findOne({
       emailVerificationToken: searchParams.token as string,

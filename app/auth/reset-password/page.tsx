@@ -1,12 +1,14 @@
 import User from "@/lib/mongooseModel";
 import ChangePasswordForm from "@/app/components/Forms/ChangePasswordForm";
 import ResetPasswordModal from "@/app/components/UI/helper/ResetPasswordModal";
+import { connectToMongoDB } from "@/lib/mongooseConnect";
 
 interface ResetPasswordPageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const ResetPasswordPage = async ({ searchParams }: ResetPasswordPageProps) => {
+  connectToMongoDB().catch((err) => console.log("error:", err));
   if (searchParams.token) {
     const user = await User.findOne({
       resetPasswordToken: searchParams.token as string,
