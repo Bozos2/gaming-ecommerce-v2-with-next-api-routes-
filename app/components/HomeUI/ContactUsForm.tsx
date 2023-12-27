@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
 import { ContactFormSchema } from "@/lib/schema";
-import { sendEmailContactForm } from "@/app/_actions";
+import { sendEmailContactForm } from "@/app/actions/_actions";
 
 export type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 

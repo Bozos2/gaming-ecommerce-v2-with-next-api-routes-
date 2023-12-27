@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { useToast } from "@/components/ui/use-toast";
 
 import { ContactFormSchema } from "@/lib/schema";
-import { sendEmailContactForm } from "@/app/_actions";
+import { sendEmailContactForm } from "@/app/actions/_actions";
 import { z } from "zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

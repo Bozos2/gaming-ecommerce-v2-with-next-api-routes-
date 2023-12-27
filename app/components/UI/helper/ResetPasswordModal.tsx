@@ -14,6 +14,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import ResetPassword from "@/app/actions/users/resetPassword";
 
 const ResetPasswordModal = ({ title }: { title: string }) => {
   const { toast } = useToast();
@@ -26,42 +27,16 @@ const ResetPasswordModal = ({ title }: { title: string }) => {
     event.preventDefault();
 
     const mail = emailRef.current?.value;
-    const data = {
-      email: mail,
-    };
+    if (mail) {
+      await ResetPassword(mail);
 
-    try {
-      const response = await fetch(
-        "http://localhost:3001/api/auth/password-reset",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify(data),
-        }
-      );
-
-      const responseData = await response.json();
-
-      if (response.status === 200) {
-        toast({
-          title: "Uspješan unos podataka!",
-          description: "Provjerite vaš mail za promjenu lozinke",
-        });
-        router.push("/");
-      } else if (response.status === 400 && responseData.err) {
-        console.log("Invalid credentials");
-        toast({
-          variant: "destructive",
-          title: "Neuspješna prijava!",
-          description:
-            "Nismo pronašli unesene podatke u našoj bazi podataka. Pokušajte ponovno.",
-        });
-      }
-    } catch (error) {
-      console.error("Error during POST request:", error);
+      toast({
+        title: "Successfully",
+        description: "Check your email for reset password",
+      });
+      router.push("/");
+    } else {
+      console.log("error");
     }
   };
 

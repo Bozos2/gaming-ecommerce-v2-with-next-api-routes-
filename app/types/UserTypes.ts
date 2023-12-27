@@ -6,6 +6,7 @@ export interface RUser {
   date_of_birth: string;
   gender: string;
   country: string;
+  emailVerified: boolean;
 }
 
 export interface LoginUserData {

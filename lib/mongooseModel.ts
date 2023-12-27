@@ -41,6 +41,23 @@ const UserSchema = new Schema({
     type: String,
     required: [true, "Country is required"],
   },
+  resetPasswordToken: {
+    type: String,
+    unique: true,
+    sparse: true,
+  },
+  resetPasswordTokenExpiry: {
+    type: Date,
+    default: null,
+  },
+  emailVerified: {
+    type: Boolean,
+    default: false,
+  },
+  emailVerificationToken: {
+    type: String,
+    unique: true,
+  },
 });
 
 const User = models.User || mongoose.model("User", UserSchema);

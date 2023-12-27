@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
 import { NewsletterSchema } from "@/lib/schema";
-import { NewsletterSubscription } from "@/app/_actions";
+import { NewsletterSubscription } from "@/app/actions/_actions";
 import { z } from "zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

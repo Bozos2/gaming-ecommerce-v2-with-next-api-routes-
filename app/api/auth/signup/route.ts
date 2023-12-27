@@ -4,6 +4,8 @@ import { connectToMongoDB } from "@/lib/mongooseConnect";
 import { RUser } from "../../../types/UserTypes";
 import mongoose, { StringSchemaDefinition } from "mongoose";
 import User from "@/lib/mongooseModel";
+import crypto from "crypto";
+import { VerifyEmail } from "@/app/actions/_actions";
 
 interface BodyResponseProp {
   email: string;
@@ -77,6 +79,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
             gender,
             date_of_birth,
             country,
+            emailVerified: false,
           });
 
           const user = {
@@ -87,7 +90,20 @@ export async function POST(req: NextRequest, res: NextResponse) {
             date_of_birth: data.date_of_birth,
             country: data.country,
             _id: data._id,
+            emailVerified: data.emailVerified,
           };
+
+          const emailVerificationToken = crypto
+            .randomBytes(32)
+            .toString("base64url");
+
+          await User.findByIdAndUpdate(
+            { _id: user._id },
+            {
+              emailVerificationToken: emailVerificationToken,
+            }
+          );
+          await VerifyEmail(email, emailVerificationToken);
 
           return NextResponse.json(
             {
