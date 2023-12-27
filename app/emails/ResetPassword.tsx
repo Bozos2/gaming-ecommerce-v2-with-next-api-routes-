@@ -16,7 +16,7 @@ export const ResetPasswordEmailTemplate: React.FC<
       To reset your password, click on this link and follow the instructions:
     </p>
     <a
-      href={`${process.env.NEXTAUTH_URL}/auth/reset-password?token=${resetPasswordToken}`}
+      href={`https://gaming-ecommerce-v2.vercel.app/auth/reset-password?token=${resetPasswordToken}`}
     >
       Click here to reset password
     </a>

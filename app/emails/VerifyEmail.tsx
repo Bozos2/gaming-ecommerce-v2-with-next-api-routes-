@@ -14,7 +14,7 @@ export const VerifyEmailTemplate: React.FC<
     </h1>
     <p>To verify your email, click on this link:</p>
     <a
-      href={`${process.env.NEXTAUTH_URL}/auth/verify-email?token=${emailVerificationToken}`}
+      href={`https://gaming-ecommerce-v2.vercel.app/auth/verify-email?token=${emailVerificationToken}`}
     >
       Click here to verify your email
     </a>
