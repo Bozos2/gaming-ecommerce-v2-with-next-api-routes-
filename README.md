@@ -1,6 +1,6 @@
 # Next.js 13 Gaming Figures e-commerce Website
 
-** This is the repository for a full-stack e-commerce website dedicated to selling 3D figures. **
+**This is the repository for a full-stack e-commerce website dedicated to selling 3D figures.**
 
 ## Tools & Features
 
@@ -34,5 +34,5 @@ npm i
 
 
 ### Mobile
-<img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/8bce43e6-5a8f-479f-be78-4e7c5f77ebe0" width="23%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/5d4a915d-4a98-44a4-ae0c-b8d29855102b" width="23%"></img> 
+<img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/8bce43e6-5a8f-479f-be78-4e7c5f77ebe0" width="23%" height="50%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/5d4a915d-4a98-44a4-ae0c-b8d29855102b" width="23%" height="50%"></img> 
 
