@@ -30,7 +30,7 @@ npm i
 ## Images 
 
 ### Desktop
-<img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/82e67c20-ff52-4ef3-9794-bd2fb78859f3" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/d276f1c0-f7f5-4b97-b580-1f878b56e34e" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/4d195d45-4fdc-47ab-9946-c8448cb34f8e" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/0806ced1-965d-406d-b8bb-7f1355692000" width="45%"></img> 
+<img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/82e67c20-ff52-4ef3-9794-bd2fb78859f3" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/d276f1c0-f7f5-4b97-b580-1f878b56e34e" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/4d195d45-4fdc-47ab-9946-c8448cb34f8e" width="45%"></img> <img src="https://github.com/Bozos2/gaming-ecommerce-v2-with-next-api-routes-/assets/125981814/0806ced1-965d-406d-b8bb-7f1355692000" width="45%" height="70%"></img> 
 
 
 ### Mobile
