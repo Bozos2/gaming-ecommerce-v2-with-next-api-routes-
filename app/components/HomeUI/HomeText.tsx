@@ -42,32 +42,32 @@ const HomeText = () => {
   };
 
   return (
-    <div className="my-12 lg:my-4 p-4 h-[750px] sm:h-[850px] sm:overflow-y-auto w-full  max-w-4xl mx-4 sm:mx-auto rounded-md">
-      <div className="mt-8 sm:mt-4">
+    <div className="mt-12 mb-16 sm:my-12 lg:my-4 py-4 px-4 sm:px-12 sm:min-h-screen overflow-y-auto w-full  max-w-4xl 2xl:mx-4">
+      <div className="mt-6 sm:mt-4">
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: "0%", opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 w-full tracking-wider text-left pl-2"
+          className="mb-8 w-full sm:tracking-wider text-left"
         >
-          <h1 className="text-foreground text-5xl sm:text-7xl  xl:text-8xl font-bold font-blackops mr-2">
+          <h1 className="text-foreground text-5xl sm:text-7xl  xl:text-8xl font-bold font-blackops sm:mr-2">
             Design Your <span className="text-primary">Figure</span> to Your
-            Preferences
+            Desires
           </h1>
         </motion.div>
-        <div className="text-foreground text-lg sm:text-2xl md:text-3xl leading-snug tracking-widest px-6 sm:px-3 text-left">
+        <div className="text-foreground text-lg sm:text-3xl leading-snug tracking-widest  text-left mt-12 sm:mt-0">
           {renderWords()}
         </div>
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: "0%", opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col sm:flex-row m-12 sm:m-0 gap-6 pt-4 sm:pt-16  font-poppins"
+          className="flex flex-col sm:flex-row  gap-6 pt-16  font-poppins"
         >
           <Button
             asChild
             variant="default"
-            className="py-7 px-16 hover:bg-foreground hover:text-primary font-bold shadow-lg shadow-red-700/30"
+            className="py-7 sm:px-16 hover:bg-foreground hover:text-primary font-bold shadow-lg shadow-red-700/30"
           >
             <Link href="/home">Buy Now</Link>
           </Button>

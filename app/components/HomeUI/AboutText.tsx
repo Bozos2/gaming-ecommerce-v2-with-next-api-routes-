@@ -16,11 +16,11 @@ const AboutText = () => {
       transition={{ duration: 0.8 }}
       className="mt-12"
     >
-      <div className="max-w-2xl mx-3 lg:mr-48 font-roboto">
+      <div className="max-w-2xl px-4 lg:mr-48">
         <h1 className="text-primary font-bold text-4xl font-roboto">
           What is the GameLoot store?
         </h1>
-        <p className="pt-4 text-lg">
+        <p className="pt-4 text-lg font-poppins">
           The GameLoot store is a new online shop established on August 6, 2022,
           with the purpose of selling gaming figurines. We create our figurines
           using a 3D printer. We are located in Belgrade and currently do not

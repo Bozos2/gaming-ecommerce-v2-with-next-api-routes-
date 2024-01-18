@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="hidden sm:flex">
           <NavbarLinks />
         </div>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row sm:gap-6">
           <CartButton />
           <NavbarAuth />
         </div>

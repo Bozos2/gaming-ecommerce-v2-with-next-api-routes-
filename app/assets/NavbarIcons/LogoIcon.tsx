@@ -6,8 +6,8 @@ const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
     id="Layer_1"
     data-name="Layer 1"
     viewBox="0 0 800 800"
-    width={70}
-    height={70}
+    width={65}
+    height={65}
     {...props}
   >
     <defs>

@@ -29,7 +29,7 @@ const Review = () => {
         type: "tween",
         duration: 0.6,
       }}
-      className="min-h-screen py-8 sm:py-12"
+      className="sm:min-h-screen py-8 sm:py-12"
     >
       <h1 className="text-foreground text-4xl sm:text-5xl pt-8 sm:pt-24 font-black font-roboto text-center mx-4">
         Reviews from our Users
@@ -90,7 +90,7 @@ const Review = () => {
             selectedSelection === 0 ? "" : "hidden"
           } flex flex-col justify-center items-center max-w-7xl text-center`}
         >
-          <p className="text-3xl sm:text-4xl mx-4">
+          <p className="text-2xl sm:text-4xl mx-4">
             "Ordering my favorite toy has never been easier. I simply sent in my
             design, and the team turned my idea into reality. Fast delivery and
             top-notch quality!"
@@ -105,7 +105,7 @@ const Review = () => {
             selectedSelection === 1 ? "" : "hidden"
           } flex flex-col justify-center  items-center max-w-7xl text-center`}
         >
-          <p className="text-3xl sm:text-4xl mx-4">
+          <p className="text-2xl sm:text-4xl mx-4">
             "I am thrilled with my new 3D gaming figurine! It looks exactly like
             my favorite character from the game. Thank you for the fast and
             reliable service."
@@ -120,7 +120,7 @@ const Review = () => {
             selectedSelection === 2 ? "" : "hidden"
           } flex flex-col justify-center items-center max-w-7xl text-center`}
         >
-          <p className="text-3xl sm:text-4xl mx-4">
+          <p className="text-2xl sm:text-4xl mx-4">
             "I bought personalized gaming figurines for my children's birthdays,
             and they were thrilled! The perfect gift for all video game
             enthusiasts."
@@ -135,7 +135,7 @@ const Review = () => {
             selectedSelection === 3 ? "" : "hidden"
           } flex flex-col justify-center items-center max-w-7xl text-center`}
         >
-          <p className="text-3xl sm:text-4xl mx-4">
+          <p className="text-2xl sm:text-4xl mx-4">
             "The perfect place to get unique 3D gaming figures. I surprised my
             friend with a personalized figurine for his birthday, and he was
             speechless."

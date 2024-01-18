@@ -17,7 +17,7 @@ const UsersText = () => {
         type: "tween",
         duration: 0.6,
       }}
-      className="flex justify-around flex-wrap h-[600px] sm:h-[400px] font-blackops"
+      className="flex justify-around flex-wrap gap-8 sm:gap-4  sm:h-[400px] font-blackops p-4 sm:px-12 py-12 sm:py-6"
     >
       <div className="flex flex-col justify-center items-center gap-2 w-60">
         <h1 className="font-bold text-5xl text-foreground">586</h1>

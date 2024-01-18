@@ -15,13 +15,13 @@ const Faq = () => {
   });
 
   return (
-    <section className="h-[1000px] sm:h-[850px] xl:h-[550px] flex  xl:flex-row flex-col-reverse  justify-center gap-12 sm:gap-24 xl:justify-around xl:gap-0 items-center">
+    <section className="xl:h-[550px] flex  xl:flex-row flex-col-reverse  justify-center gap-12 sm:gap-24 xl:justify-around xl:gap-0 items-center px-4 py-12 sm:py-6">
       <motion.div
         ref={ref}
         initial={{ x: "-100%", opacity: 0 }}
         animate={{ x: inView ? "0%" : "-100%", opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.8 }}
-        className="w-[320px] sm:w-[500px]"
+        className="w-[260px] sm:w-[500px]"
       >
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-b-2">
@@ -84,7 +84,7 @@ const Faq = () => {
         <h1 className="text-4xl sm:text-5xl font-roboto">
           Frequently Asked Questions
         </h1>
-        <p className="text-lg font-poppins pt-4">
+        <p className="text-base sm:text-lg font-poppins pt-4">
           Our selection of frequently asked questions and answers is designed to
           provide you with the necessary information quickly and easily. All
           questions are carefully selected to cover various aspects of our

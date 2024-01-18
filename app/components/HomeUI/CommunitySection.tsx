@@ -19,7 +19,7 @@ const CommunitySection = () => {
   });
 
   return (
-    <section className="h-[800px] xl:h-[500px] flex flex-col xl:flex-row  justify-around items-center">
+    <section className="xl:h-[500px] flex flex-col xl:flex-row  justify-around items-center px-4 py-12 sm:py-6">
       <motion.div
         ref={ref}
         initial={{ x: "-100%", opacity: 0 }}
@@ -30,7 +30,7 @@ const CommunitySection = () => {
         <h1 className="text-4xl sm:text-5xl font-roboto">
           Join Our Community!
         </h1>
-        <p className="text-lg font-poppins pt-4">
+        <p className="text-base sm:text-lg font-poppins pt-4">
           We invite you to become a part of our passionate community dedicated
           to 3D modeling. Together, we create a space where we can exchange
           ideas, experiences, and inspiration. Our community is open to all who
@@ -46,7 +46,7 @@ const CommunitySection = () => {
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: inView ? "0%" : "100%", opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.8 }}
-        className="grid grid-cols-4 gap-2 sm:gap-4"
+        className="grid grid-cols-4 gap-2 sm:gap-4 mt-6"
       >
         <div className="h-[70px] w-[70px] border-2 rounded-full text-[#e11d48] border-[#e11d48] flex justify-center items-center hover:bg-[#e11d48] hover:text-white hover:cursor-pointer transition ease-in duration-300 hover:-translate-y-0.5  hover:scale-110">
           <Link href="discord">

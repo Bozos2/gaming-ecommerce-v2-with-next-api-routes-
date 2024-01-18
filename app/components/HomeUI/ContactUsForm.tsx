@@ -66,7 +66,7 @@ const ContactUsForm = () => {
       }}
       className="flex flex-col items-center justify-center min-h-screen py-12"
     >
-      <div className="mx-8  mb-24 ">
+      <div className="mx-4 px-4 sm:mx-8  mb-24 ">
         <h1 className="text-foreground text-4xl sm:text-5xl pt-12 font-black font-roboto">
           Contact Us!
         </h1>
@@ -77,11 +77,11 @@ const ContactUsForm = () => {
           we look forward to hearing from you.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row gap-4 h-[660px] lg:h-[300px]">
+      <div className="flex flex-col items-center lg:flex-row gap-4 h-[660px] lg:h-[300px]">
         <div className="flex flex-col justify-between gap-2 max-w-xl">
           <Link
             href="/contact"
-            className="w-full  flex flex-row items-center gap-3 p-4  rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
+            className="sm:w-full  flex flex-row items-center gap-3 p-4  rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
           >
             <PhoneIcon />
             <p className="text-foreground text-base font-semibold">
@@ -92,16 +92,16 @@ const ContactUsForm = () => {
 
           <Link
             href="/contact"
-            className="w-full  flex flex-row items-center gap-3 p-4 rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
+            className="sm:w-full  flex flex-row items-center gap-3 p-4 rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
           >
             <MailIcon />{" "}
             <p className="text-foreground text-base font-semibold">
-              GameLoottrgovina@gmail.com
+              GameLoot@gmail.com
             </p>
           </Link>
           <Link
             href="/contact"
-            className="w-full flex flex-row items-center gap-3 p-4  rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
+            className="sm:w-full flex flex-row items-center gap-3 p-4  rounded-md bg-[#1f1f1f] hover:cursor-pointer hover:bg-background"
           >
             <LocationIcon />{" "}
             <p className="text-foreground text-base font-semibold">
@@ -111,7 +111,7 @@ const ContactUsForm = () => {
         </div>
         <form
           method="POST"
-          className="w-[330px] sm:w-[430px] flex flex-col gap-2 justify-between"
+          className="w-[280px] sm:w-[430px] flex flex-col gap-2 justify-between"
           onSubmit={handleSubmit(submitHandler)}
         >
           <div className="flex flex-col gap-2 sm:flex-row justify-between">

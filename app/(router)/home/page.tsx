@@ -24,10 +24,10 @@ const Home = () => {
       </div>
 
       <div className=" bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-stone-800 via-zinc-900 to-black  py-4">
-        <div className="flex justify-end">
+        <div className="flex  justify-center xl:justify-end">
           <AboutText />
         </div>
-        <div className="flex justify-center mt-44">
+        <div className="flex justify-center mt-24 xl:mt-44">
           <AboutIcons />
         </div>
       </div>
